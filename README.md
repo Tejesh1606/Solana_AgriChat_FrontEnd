@@ -41,12 +41,15 @@ Check this repo for pre dependencies : https://github.com/Tejesh1606/Solana_Agri
 
 ### Output
 
-Initial Look:
+#### Initial Look:
+
 ![initial look](https://github.com/Tejesh1606/Solana_AgriChat_FrontEnd/assets/96534599/b0477d1d-2935-4359-8fa4-7af95aefe8be)
 
-Message can be sent by this method:
+#### Message can be sent by this method:
+
 ![Message send section](https://github.com/Tejesh1606/Solana_AgriChat_FrontEnd/assets/96534599/12b66665-4abd-44a6-bc4c-b54415dda953)
 - Message can neither be deleted nor be updated
 
-Message can be viewed here :
+#### Message can be viewed here :
+
 ![Message view section](https://github.com/Tejesh1606/Solana_AgriChat_FrontEnd/assets/96534599/90addb69-f252-486b-8969-a0ad18f7c63b)
