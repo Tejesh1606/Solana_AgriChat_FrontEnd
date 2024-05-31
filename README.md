@@ -18,7 +18,8 @@ Check this repo for pre dependencies : https://github.com/Tejesh1606/Solana_Agri
 - Step 5: Copy public available on the top of the wallet and goto https://faucet.solana.com/ and get some SOL for transaction
 - Step 6: Run and get program id from the link https://github.com/Tejesh1606/Solana_AgriChat_SmartContract.git
 - Step 7: Edit: src -> app -> shared -> idls -> solana-chat.idl.ts -> Change the program id in both places 
-- `npm start`
+- Step 8: `npm start`
+- Step 9: Use this code for creating file to nft and post it in the app.
 
 #### Required dependencies
 
