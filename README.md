@@ -20,7 +20,7 @@ Check this repo for pre dependencies : https://github.com/Tejesh1606/Solana_Agri
 - Step 7: Edit: src -> app -> shared -> idls -> solana-chat.idl.ts -> Change the program id in both places 
 - Step 8: `npm start`
   ![npm start terminal](https://github.com/Tejesh1606/Solana_AgriChat_FrontEnd/assets/96534599/eabfca38-0978-489b-a57e-679d1d8c34ab)
-- Step 9: Use this code for creating file to nft and post it in the app.
+- Step 9: Use this code https://github.com/Tejesh1606/Nft_Minter_AgriChat.git , for creating file to nft and post it in the app.
 
 #### Required dependencies
 
