@@ -1,0 +1,28 @@
+<div class="app-new-message">
+
+    <div>
+        <h1>Send message</h1>
+    </div>
+
+    <form [formGroup]="formMessage">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Message</mat-label>
+            <input type="text" matInput formControlName="text">
+            <mat-icon matSuffix>message</mat-icon>
+            <mat-error>Enter your message</mat-error>
+        </mat-form-field>
+
+        <button *ngIf="!loading, else appLoading" (click)="sendMessage()" class="btn-form" mat-button>
+            Send
+        </button>
+
+    </form>
+
+    <ng-template #appLoading>
+        <mat-spinner
+            [diameter]="40"
+        ></mat-spinner>
+    </ng-template>
+
+</div>

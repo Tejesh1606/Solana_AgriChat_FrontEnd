@@ -1,0 +1,52 @@
+<div class="app-title">
+    <h1>My messages</h1>
+</div>
+
+<div class="app-my-messages">
+
+    <div *ngIf="walletAddress; else logout" class="messages-wrapped">
+
+        <div *ngIf="!loading; else appLoading">
+
+            <div *ngIf="messages && messages.length > 0; else withoutMessages">
+
+                <div *ngFor="let m of messages">
+                    <div class="message">
+                        <p>{{ m.account.text }}</p>
+                        <div>
+                            <small>{{ getDate(m.account.timestamp.toString()) }}</small>
+                            <button (click)="editMessage(m)" mat-icon-button>
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button (click)="deleteMessage(m)" mat-icon-button>
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <ng-template #withoutMessages>
+            <div class="without-messages">
+                <p>You haven't sent messages yet.</p>
+            </div>
+        </ng-template>
+
+    </div>
+
+    <ng-template #logout>
+        <div class="wallet-disconnect">
+            <p>Connect your wallet to see all messages.</p>
+        </div>
+    </ng-template>
+
+    <ng-template #appLoading>
+        <mat-spinner
+            [diameter]="40"
+        ></mat-spinner>
+    </ng-template>
+
+</div>

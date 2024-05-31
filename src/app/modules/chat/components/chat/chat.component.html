@@ -1,0 +1,53 @@
+<div class="app-title">
+    <h1>Chat</h1>
+</div>
+
+<div class="app-chat">
+
+    <div *ngIf="walletAddress; else logout" ngClass="{{ messages && messages.length > 0 ? 'messages-wrapped' : '' }}">
+
+        <div *ngIf="!loading; else appLoading">
+
+            <div *ngIf="messages && messages.length > 0; else withoutMessages">
+                <div *ngFor="let m of messages">
+                    <div class="message" ngClass="{{ walletAddress == m.account.owner.toString() ? 'message-right' : 'message-left' }}">
+                        <div class="msg-box">
+                            <small>{{ cutAddress(m.account.owner.toString()) }}</small>
+                            <p>
+                                {{ m.account.text }}
+                                <span>{{ getDate(m.account.timestamp.toString()) }}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <ng-template #withoutMessages>
+        <div class="without-messages">
+            <p>There aren't messages yet.</p>
+        </div>
+    </ng-template>
+
+    <ng-template #logout>
+        <div class="wallet-disconnect">
+            <p>Connect your wallet to see all messages.</p>
+        </div>
+    </ng-template>
+
+    <ng-template #appLoading>
+        <mat-spinner
+            [diameter]="40"
+        ></mat-spinner>
+    </ng-template>
+
+    <div *ngIf="walletAddress">
+        <button (click)="sendNewMessage()" class="new-message" mat-button>
+            Send message
+        </button>
+    </div>
+
+</div>
